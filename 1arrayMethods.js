@@ -1,8 +1,10 @@
+// array - collection of elements of same type or different type
 // array method
 
 // forEach
 
 const numbers = [4,5,6,2];
+
 
 function multiByTwo(number,index){
     console.log(`index is ${index}`)
@@ -34,14 +36,14 @@ const name = arr.map((user)=>{
 
 
 
-// filter method
+// filter method - return array of elements which satisfy the condition
 const even = numbers.filter((num)=> {
     return num%2===0;
 })
 // console.log(even);
 
 
-// reduce method
+// reduce method - return single value from array sum, avg, max, min etc
 //  [4,5,6,2];
 const sum = numbers.reduce((accumulator, currValue)=> {
     // console.log(accumulator, currValue);
@@ -74,7 +76,8 @@ const total = userCart.reduce((totalPrice, currProduct)=>{
 
 
 
-// sort method -> actual array me changes krta h   
+// sort method -> actual array me changes krta h
+// sort method ASCII values ke according sort krta h
 const userd = ["harsh","jink","dharm","Suio"];
 userd.sort()
 // console.log(userd);
@@ -82,7 +85,7 @@ userd.sort()
 const nums = [5,8,6,41,8,1,5];
 nums.sort((a,b)=>  a-b
     // for desending -> b-a
-)
+)                                                                                              
 // console.log(nums);
 
 //a-b -> negative -> a,b
@@ -106,7 +109,7 @@ const highToLow = prod.slice(0).sort((a,b)=> b.price-a.price)
 
 
 
-// find method
+// find method - return first element which satisfy the condition
 
 const msg = ["hello","namaste","tata","bye"]
 
@@ -125,7 +128,7 @@ const userFind = users.find((user)=> user.id === 2)
 
 
 
-// every method
+// every method - return true if all elements satisfy the condition
 const evenNot = nums.every((num)=> num%2 === 0)
 
 // callback mrthod -> true / false
@@ -138,7 +141,7 @@ const priceLess = userCart.every((item) => item.price<30000)
 
 
 
-// some method
+// some method - return true if any element satisfy the condition
 const oddNot = nums.some((num)=> num%2 === 0)
 // console.log(oddNot);
 
@@ -147,7 +150,7 @@ const priceLessSome = userCart.some((item) => item.price<50000)
 
 
 
-// fill method
+// fill method - fill the array with static value
 // value, start, end
 
 const myArray = new Array(10).fill(0);
@@ -160,15 +163,19 @@ myArray1.fill(0,2,5)
 
 
 
-// splice method
+// splice method - delete, insert, both
 const gArr = ['item','item2','item3'];
+// console.log(gArr);
 
-// delete
-const delItem = gArr.splice(1,1);
+// delete - 1st arg -> index, 2nd arg -> no of elements to delete from that index 
+const delItem = gArr.splice(1,2);
+// console.log(gArr);
+// console.log(delItem);
 
-// insert
+// insert - 1st arg -> index, 2nd arg -> no of elements to delete from that index, 3rd arg -> new element
 gArr.splice(1,0,'newItem');
+console.log(gArr);
 
-// both 
+// both  - 1st arg -> index, 2nd arg -> no of elements to delete from that index, 3rd arg -> new element
 gArr.splice(1,3,"another","JINC","jai ho")
 console.log(gArr);
