@@ -1,6 +1,8 @@
 // methods
 // function inside object 
 // this - arrow fn ke sath kam nhi krta
+// this - window object ko point krta h by default
+// mean of this - current object
 
 function personInfo(){
     console.log(`person name is ${this.fName} and age is ${this.age}`);
@@ -48,7 +50,7 @@ const user2 = {
 // .call() method se hum ek object ke method ko dusre object ke sath use kr skte h
 
 // about.apply(user1, ["coding", "pizza"]);
-// apply() method me hume parameter array me pass krna hota h
+// apply() method me hume arguments  array me pass krna hota h
 
 // about.bind(user1, "coding", "pizza")();
 // .bind() method se hume ek function ko bind krna hota h, iska return value ek function hota h
@@ -62,9 +64,10 @@ const user3 = {
     }
     // short hand syntax
 }
+// const fun = user3.about;
 const fun = user3.about.bind(user3);
 
-// yha this window object ko point kr rha h, but ise user3 object ko point krwane ke liye hume call(), apply(), bind() use krna hoga
+// yha this window object ko point kr rha h, but ise user3 object ko point krwane ke liye hume bind() use krna hoga
 
 // fun();
 

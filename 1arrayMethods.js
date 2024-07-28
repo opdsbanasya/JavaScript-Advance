@@ -174,8 +174,8 @@ const delItem = gArr.splice(1,2);
 
 // insert - 1st arg -> index, 2nd arg -> no of elements to delete from that index, 3rd arg -> new element
 gArr.splice(1,0,'newItem');
-console.log(gArr);
+// console.log(gArr);
 
 // both  - 1st arg -> index, 2nd arg -> no of elements to delete from that index, 3rd arg -> new element
 gArr.splice(1,3,"another","JINC","jai ho")
-console.log(gArr);
+// console.log(gArr);
