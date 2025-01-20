@@ -22,13 +22,13 @@ console.log(fName); // line-3
 var fName = "Jai";  // line-4
 console.log(fName); // line-5
 ```
-    |   1. Memory Creation Phase    |   2. Execution Phase          |
-    | --- | --- |
-    |   window : {}                 |    line-1 (window Object)     |
-    |   this : window               |    line-2 (window Object)     |
-    |   fName : undefined           |    line-3 (undefined)         |
-    |   fName : "Jai"               |    line-4 executed            |
-    |                               |    line-5 (Jai)               |
+| Memory Creation Phase | Execution Phase          |
+|-----------------------|--------------------------|
+| window : {}           | line-1 (window Object)   |
+| this : window         | line-2 (window Object)   |
+| fName : undefined     | line-3 (undefined)       |
+| fName : "Jai"         | line-4 executed          |
+|                       | line-5 (Jai)             |
 
 - When Global Execution Context is created, it has `this` pointing to `window` object.
 - In the creation phase, `Variable Object` is created and all the variables are set to `undefined`.
