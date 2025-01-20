@@ -23,7 +23,7 @@ var fName = "Jai";  // line-4
 console.log(fName); // line-5
 ```
     |   1. Memory Creation Phase    |   2. Execution Phase          |
-    | ---| --- |
+    | --- | --- |
     |   window : {}                 |    line-1 (window Object)     |
     |   this : window               |    line-2 (window Object)     |
     |   fName : undefined           |    line-3 (undefined)         |
