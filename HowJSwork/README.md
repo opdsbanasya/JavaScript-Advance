@@ -1,7 +1,7 @@
 # How JavaScript Works
 JavaScript is Syncronous, Single-threaded language.
 
-### JS works on two phases:
+## JS works on two phases:
 - Compilation phase
     - tokenizing / lexing : breaking the code into small pieces called tokens
     - parsing : converting tokens into a tree called Abstract Syntax Tree (AST)
@@ -14,6 +14,8 @@ JavaScript is Syncronous, Single-threaded language.
             - Determination of the value of `this`
         - Execution phase
             - Execution of the code line by line
+### Global Execution context
+### This and window in global execution context
 
 ```javascript
 console.log(this);  // line-1
@@ -41,7 +43,7 @@ console.log(fName); // line-5
 - Before the execution phase, all the varialbes and functions ara `stored` in memory. During the `Global Execution Creation`, these variables have been created but not initialized. This is called `Hoisting`.
 
 - During Global Execution Cintext Creation, all functions declarations are stored in memory. But function expressions are not hoisted.
-
+#### Are let and const are hoisted ? What is a reference Error ? 
 - In case of `let` and `const`, they are hoisted but not initialized. Period of `un-initialized` variable is known as **`Temporal Dead Zone`**.
 
 ## Global Scope
@@ -73,3 +75,5 @@ const name = getFullName("Jai", "Kumar");
 console.log(name);
 ```
 ![Function Execution](./1.png)
+
+### Scope chain and lexical environment

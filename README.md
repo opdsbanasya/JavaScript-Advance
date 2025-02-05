@@ -1,22 +1,22 @@
 # JavaScript Beginning to Mastery Syllabus
-- Basics of Programming in JavaScript
-- Arrays in JavaScript
-- Objects in JavaScript
-- Functions in JavaScript
-- Very Important Array Methods
-- More useful things 
-- Object Oriented JavaScript / Prototypal Inheritance
-- How JavaScript Works
-- DOM Tutorial
-- Events
-- Asynchronous JavaScript
-- Promises, network request
-- ES6 (ES2015) Modules
+- [Basics of Programming in JavaScript](./Basics/README.md)
+- [Arrays in JavaScript](./Array/README.md)
+- [Objects in JavaScript](./Objects/README.md)
+- [Functions in JavaScript](./Function/README.md)
+- [Very Important Array Methods](./ArrayMethods/README.md)
+- [More useful things](./Map%20and%20set/README.md)
+- [Prototypal Inheritance](./Proto%20and%20Prototype/README.md)
+- [Object Oriented JavaScript](./OOPS/README.md)
+- [How JavaScript Works](./HowJSwork/README.md)
+- [DOM](./DOM/README.md)
+- [Events](./Events/README.md)
+- [Asynchronous JavaScript](./Async%20JS/README.md)
+- [Promises, network request](./Promises/README.md)
+- [ES6 (ES2015) Modules](./ES6/README.md)
 
-## find detailed syllabus on [JavaScript Beginning to Mastery](https://docs.google.com/document/d/1szmtyiymgBkIrsvtMzTESIh80uP2bUZGQ4BYAsdvfBM/edit)
 
-Congratulations. Now you know javascript in Great Details. What next ? 
-- Multiple Projects
-- Interview Questions
-- Web Performance
-- Testing
+ 
+
+
+
+

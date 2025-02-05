@@ -1,0 +1,15 @@
+## Promises, network request
+- Intro to promises
+- Microtask Queue
+- Function that returns promise
+- Promise and settimeout
+- Promise.resolve and more about then method
+- Convert nested Callbacks to flat code using promises
+- Intro to Ajax, HTTP Request
+- XHR requests
+- Error handling in XHR requests
+- XHR request Chaining 
+- Promisifying XHR requests and chaining using then method
+- Fetch API
+- Error Handling in Fetch API
+- Consume Promises with async and Await
