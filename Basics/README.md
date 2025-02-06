@@ -243,4 +243,51 @@ console.log(number);
   ```
 - **📌 Use Case:** Runs at least once.
 
+## Question Time! 🚀
+### **1. String Indexing and Methods**
+Write a JavaScript program that:
+- Takes a string `"JavaScript"` as input.
+- Prints the 4th character of the string.
+- Converts the string to uppercase.
+- Replaces the substring `"Script"` with `"Code"`.
+- Output the final string.
 
+---
+
+### **2. Template Strings and Ternary Operator**
+Write a JavaScript program that:
+- Takes a user's name and age as input.
+- Uses a **template string** to display: `"Hello [name], you are [age] years old."`
+- Uses a **ternary operator** to check if the user is an adult (age >= 18) and prints `"Adult"` or `"Minor"`.
+
+---
+
+### **3. Truthy/Falsy Values and Logical Operators**
+Write a JavaScript program that:
+- Declares three variables: `a = 0`, `b = "Hello"`, and `c = null`.
+- Uses **logical operators** (`&&`, `||`) to check if at least one of the variables is truthy.
+- Prints the result of the check.
+
+---
+
+### **4. Switch Statement**
+Write a JavaScript program that:
+- Takes a day of the week (e.g., `"Monday"`) as input.
+- Uses a **switch statement** to print:
+  - `"Start of the week"` for Monday.
+  - `"Midweek"` for Wednesday.
+  - `"Weekend is near"` for Friday.
+  - `"Invalid day"` for any other input.
+
+---
+
+### **5. For Loop and Break/Continue**
+Write a JavaScript program that:
+- Uses a **for loop** to iterate from 1 to 10.
+- Skips even numbers using the **continue** keyword.
+- Stops the loop if the number is 7 using the **break** keyword.
+- Prints the numbers that are processed.
+
+---
+
+These questions cover a mix of concepts like string manipulation, conditional logic, loops, and operators. Try solving them to reinforce your understanding! 🚀
