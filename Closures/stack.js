@@ -1,9 +1,10 @@
-const createStack = () => {
+const createStack = (values) => {
     let stack = new Array();
+    let val = 0;
     let i = -1;
     const stackOp = {
-        push: (elem) => {
-            stack[++i] = elem
+        push: () => {
+            stack[++i] = values[val++];
         },
         pop: () => {
             if(i < 0) return undefined;
@@ -21,11 +22,11 @@ const createStack = () => {
     return stackOp;
 }
 
-let stack = createStack();
-stack.push(5);
-stack.push(4);
-stack.push(6);
-stack.push(8);
+const values = [5,4,6]
+let stack = createStack(values);
+stack.push();
+stack.push();
+stack.push();
 stack.display();
 let popped = stack.pop();
 console.log("Popped elem: ",popped);
