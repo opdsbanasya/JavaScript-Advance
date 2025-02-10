@@ -3,7 +3,6 @@
 - [Arrays in JavaScript](./Array/README.md)
 - [Objects in JavaScript](./Objects/README.md)
 - [Functions in JavaScript](./Function/README.md)
-- [Very Important Array Methods](./ArrayMethods/README.md)
 - [More useful things](./Map%20and%20set/README.md)
 - [Prototypal Inheritance](./Proto%20and%20Prototype/README.md)
 - [Object Oriented JavaScript](./OOPS/README.md)
