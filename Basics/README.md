@@ -6,7 +6,7 @@ console.log("Hello World");
 ```
 
 ## Declare variable using var 📦
-Variable are used to store data. To declare a variable in JavaScript, we can use `var` keyword. variable is declared by let can be change. Syntax is: `var variable_name = value;`
+Variable are used to store data. To declare a variable in JavaScript, we can use `var` keyword. Syntax is: `var variable_name = value;`
 ```javascript
 var name = "Ajay";
 console.log(name);
@@ -15,25 +15,81 @@ console.log(name);
 ## More about variable 📦
 **Variable Naming Rules**: 
 - Variable name can contain `letters`(`a-zA-Z`), `digits`(`0-9`), `underscore`(`_`) and `dollar sign`(`$`).
-- Variable name can't start with a digit.
-- Variable name can't contain spaces.
-- Variable name can't be a reserved keyword.
+- Variable name can't start with a `digit`.
+- Variable name can't contain `spaces`.
+- Variable name can't be a `reserved keyword`.
 
 ## Let 📦
-`let` is a new way to declare variable is `JavaScript`. It is `block scoped`. Block scope means, variable declared using `let` is only available in the `block` where it is declared. Once a variable is declared by `let` can't be `declared` but can `reinitialize`. Syntax is: `let variable_name = value;`
+`let` is a new way to declare variable is `JavaScript`. It is `block scoped`. Block scope means, variable declared using `let` is only available in the `block` where it is declared. Syntax is: `let variable_name = value;`
 ```javascript
 let name = "Kumar Verma";
 console.log(name);
 ```
 
 ## Const 📦
-`const` is used to declare constant variable in JS. Once a variable is declared using `const` keyword it can't be changed. Syntax is: `const variable_name = value;`
+`const` is used to declare constant variable in JS. Syntax is: `const variable_name = value;`
 ```javascript
 const number = 513;
 console.log(number);
 ```
 
-##  String 🏷️ Indexing
+## `var` vs `let` vs `const` 👽
+
+| Feature         | `var`                          | `let`                          | `const`                         |
+|---------------|--------------------------------|--------------------------------|--------------------------------|
+| Scope        | Function-scoped               | Block-scoped                   | Block-scoped                   |
+| Hoisting     | Hoisted (initialized as `undefined`) | Hoisted (but not initialized) | Hoisted (but not initialized) |
+| Reassignment | Allowed                        | Allowed                        | Not Allowed (value is constant) |
+| Redeclaration | Allowed                        | Not Allowed in the same scope  | Not Allowed in the same scope  |
+| Initialization | Optional                      | Optional                       | Mandatory (must be initialized) |
+| Mutability   | Mutable                         | Mutable                        | Immutable (but objects/arrays can be modified) |
+
+### Key Differences:
+- **Scope:** `var` is **function-scoped**, while `let` and `const` are **block-scoped**.
+- **Hoisting:** `var` is hoisted and initialized as `undefined`, while `let` and `const` are hoisted but not initialized (they give a **ReferenceError** if accessed before declaration).
+- **Reassignment:** `var` and `let` allow reassignment, but `const` does not.
+- **Redeclaration:** `var` allows redeclaration, but `let` and `const` do not.
+- **Initialization:** `const` **must** be initialized at the time of declaration.
+
+#### Example:
+```javascript
+var x = 10;
+let y = 20;
+const z = 30;
+
+x = 15; // ✅ Allowed
+y = 25; // ✅ Allowed
+z = 35; // ❌ Error (Assignment to constant variable)
+```
+## 🎯 Variable Scope  
+**Scope** defines where a variable can be accessed in your code. There are **three types of scope** in JavaScript:  
+| Scope Type        | Meaning 📖 | Example 👇 |
+|-------------------|-----------|------------|
+| **Global Scope** 🌍 | A variable declared outside any function/block can be accessed anywhere in the code. | `var x = 10;` (Accessible everywhere) |
+| **Function Scope** 🎯 | A variable declared inside a function can only be accessed within that function. | `function test() { var y = 20; }` (Only inside `test()`) |
+| **Block Scope** 🔒 | A variable declared inside `{}` using `let` or `const` is only accessible inside that block. | `{ let z = 30; }` (Only inside `{}`) |
+
+### 🔍 **How Scope Works?**  
+```javascript
+var globalVar = "I'm global!"; // 🌍 Global scope
+
+function myFunction() {
+    var functionVar = "Inside function"; // 🎯 Function scope
+    console.log(functionVar); // ✅ Works here
+}
+
+if (true) {
+    let blockVar = "Inside block"; // 🔒 Block scope
+    console.log(blockVar); // ✅ Works here
+}
+
+console.log(globalVar); // ✅ Accessible
+console.log(functionVar); // ❌ Error (Not accessible outside function)
+console.log(blockVar); // ❌ Error (Not accessible outside block)
+```
+
+## String 🏷️ Indexing
+- **string**: A sequence of characters enclosed in quotes.
 - **What**: Access individual characters in a string using their position (index).
 - **Why**: To manipulate or extract specific parts of a string.
 - **Syntax**: `string[index]`
@@ -63,7 +119,7 @@ console.log(number);
 - **📌 Use Case:** String manipulation, validation.
 
 ## Template Strings 📝
-- **What**: Embed expressions inside strings using backticks.
+- **What**: Embed expressions inside strings using backticks `` ` ` ``.
 - **Why**: To create dynamic strings easily.
 - **Syntax**: `` `string ${expression}` ``
 - **Example**:
@@ -73,7 +129,7 @@ console.log(number);
   ```
 - **📌 Use Case:** Easier string formatting.
 
-## Null, Undefined, BigInt, typeof 🤷‍♂️
+## `Null`, `Undefined`, `BigInt`, `typeof` 🤷‍♂️
 - **Null**: Represents an intentional absence of value.
 - **Undefined**: A variable declared but not assigned.
 - **BigInt**: Used for very large integers (beyond `Number` limits).
@@ -100,6 +156,18 @@ console.log(number);
   ```
 - **📌 Use Case:** Conditional checks.
 
+## `==` vs `===` vs Object.is() 🤔
+- **`==`**: Checks for equality after type conversion.
+- **`===`**: Checks for equality without type conversion (strict).
+- **`Object.is()`**: Checks for equality without type conversion (no coercion).
+- **Examples**:
+  ```javascript
+  console.log(5 == "5"); // true (coerced equality)
+  console.log(5 === "5"); // false (strict equality)
+  console.log(Object.is(5, "5")); // false (no coercion)
+  ```
+- **📌 Use Case:** Strict equality checks.
+
 ## Truthy & Falsy Values ⚖️
 - **What**: Values that evaluate to `true` or `false` in a boolean context.
 - **Falsy Values**: `false`, `0`, `""`, `null`, `undefined`, `NaN`
@@ -109,6 +177,17 @@ console.log(number);
   if ("hello") console.log("Truthy");
   ```
 - **📌 Use Case:** Shorter conditional checks.
+
+## Type Conversion 🔄
+- **What**: Converting one data type to another.
+- **Why**: To perform operations on different data types.
+- **Types**: Implicit (automatic) & Explicit (manual)
+- **Examples**:
+  ```javascript
+  let num = 10;
+  console.log(num + ""); // "10" (number to string) -> Implicit
+  console.log(Number("10")); // 10 (string to number) -> Explicit
+  ```
 
 ## If-Else Statement 🤔
 - **Why**: To control the flow of your program.
@@ -134,7 +213,7 @@ console.log(number);
 - **📌 Use Case:** Shorter `if-else`.
 
 ## && (AND) || (OR) Operator 🔗
- **What**: Logical operators to combine conditions.
+- **What**: Logical operators to combine conditions.
 - **Why**: To check multiple conditions at once.
 - **Examples**:
   ```javascript
@@ -290,4 +369,3 @@ Write a JavaScript program that:
 
 ---
 
-These questions cover a mix of concepts like string manipulation, conditional logic, loops, and operators. Try solving them to reinforce your understanding! 🚀

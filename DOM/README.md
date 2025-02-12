@@ -122,3 +122,5 @@ console.log(box.offsetWidth, box.offsetHeight); // Includes padding & border
 console.log(box.clientWidth, box.clientHeight); // Only content & padding
 console.log(box.getBoundingClientRect()); // Get precise dimensions & position
 ```
+
+## DOM API

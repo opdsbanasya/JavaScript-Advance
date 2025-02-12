@@ -135,3 +135,27 @@ function multiplier(factor) {
 const double = multiplier(2);
 console.log(double(5)); // 10
 ```
+
+## 🚀 IIFE (Immediately Invoked Function Expression)
+An IIFE is a function that is **immediately invoked** after its definition. 
+```javascript
+(function () {
+  console.log("I am an IIFE!");
+})();
+```
+## Arguments Object
+The `arguments` object is an **array-like object** accessible inside functions. 
+```javascript
+function sum() {
+  let total = 0;
+  for (let num of arguments) {
+    total += num;
+  }
+  return total;
+}
+console.log(sum(1, 2, 3, 4, 5)); // 15
+```
+
+## 🛡️ Quiz
+Test your knowledge with this quiz: [Functions Quiz](https://quiz.thatjs.dev/?c=1)
+
