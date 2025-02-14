@@ -88,6 +88,31 @@ console.log(functionVar); // ❌ Error (Not accessible outside function)
 console.log(blockVar); // ❌ Error (Not accessible outside block)
 ```
 
+## **🆚 Primitive vs Reference Data Types**
+### **📍 Primitive Data Types:**
+- 🗂️ **Stored in stack memory**
+- 🔄 **Immutable** (modifications create a new value)
+- Examples: `🔢 Number`, `✍️ String`, `✅ Boolean`, `null`, `undefined`, `🔣 Symbol`
+
+```js
+let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10 (unchanged)
+```
+
+### **📌 Reference Data Types:**
+- 🗄️ **Stored in heap memory**
+- 🔁 **Mutable** (changes affect the original object/array)
+- Examples: `📦 Array`, `🏗️ Object`, `🛠️ Function`
+
+```js
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+arr2.push(4);
+console.log(arr1); // [1, 2, 3, 4] (changed)
+```
+
 ## String 🏷️ Indexing
 - **string**: A sequence of characters enclosed in quotes.
 - **What**: Access individual characters in a string using their position (index).

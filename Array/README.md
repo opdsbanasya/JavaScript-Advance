@@ -33,33 +33,6 @@ arr.shift();   // [1, 2, 3]
 
 ---
 
-## **🆚 Primitive vs Reference Data Types**
-### **📍 Primitive Data Types:**
-- 🗂️ **Stored in stack memory**
-- 🔄 **Immutable** (modifications create a new value)
-- Examples: `🔢 Number`, `✍️ String`, `✅ Boolean`, `null`, `undefined`, `🔣 Symbol`
-
-```js
-let a = 10;
-let b = a;
-b = 20;
-console.log(a); // 10 (unchanged)
-```
-
-### **📌 Reference Data Types:**
-- 🗄️ **Stored in heap memory**
-- 🔁 **Mutable** (changes affect the original object/array)
-- Examples: `📦 Array`, `🏗️ Object`, `🛠️ Function`
-
-```js
-let arr1 = [1, 2, 3];
-let arr2 = arr1;
-arr2.push(4);
-console.log(arr1); // [1, 2, 3, 4] (changed)
-```
-
----
-
 ## **📑 Clone Array & Spread Operator**
 ### **📋 Cloning Methods:**
 - Using `.slice()` ✂️
@@ -74,73 +47,6 @@ let copy3 = original.concat();
 
 copy2.push(4);
 console.log(original); // [1, 2, 3] (unchanged)
-```
-
----
-
-## **🚀 Higher Order Array Methods**
-
-### **📌 `map()`** - Transforms each element
-```js
-let numbers = [1, 2, 3, 4];
-let squared = numbers.map(num => num * num);
-console.log(squared); // [1, 4, 9, 16]
-```
-
-### **📌 `filter()`** - Filters elements based on condition
-```js
-let ages = [12, 18, 25, 30, 16];
-let adults = ages.filter(age => age >= 18);
-console.log(adults); // [18, 25, 30]
-```
-
-### **📌 `reduce()`** - Accumulates values
-```js
-let numbers = [1, 2, 3, 4];
-let sum = numbers.reduce((acc, num) => acc + num, 0);
-console.log(sum); // 10
-```
-
-### **📌 `find()`** - Finds first match
-```js
-let numbers = [5, 12, 8, 130, 44];
-let found = numbers.find(num => num > 10);
-console.log(found); // 12
-```
-
-### **📌 `some()`** - Checks if any element matches condition
-```js
-let numbers = [1, 2, 3, 4];
-let hasEven = numbers.some(num => num % 2 === 0);
-console.log(hasEven); // true
-```
-
-### **📌 `every()`** - Checks if all elements match condition
-```js
-let numbers = [2, 4, 6, 8];
-let allEven = numbers.every(num => num % 2 === 0);
-console.log(allEven); // true
-```
-
-### **📌 `sort()`** - Sorts array (default: lexicographical order)
-```js
-let numbers = [4, 2, 9, 1];
-numbers.sort((a, b) => a - b);
-console.log(numbers); // [1, 2, 4, 9]
-```
-
-### **📌 `reverse()`** - Reverses array
-```js
-let arr = [1, 2, 3];
-arr.reverse();
-console.log(arr); // [3, 2, 1]
-```
-
-### **📌 `splice()`** - Removes or replaces elements
-```js
-let arr = ["a", "b", "c", "d"];
-arr.splice(1, 2, "x", "y");
-console.log(arr); // ["a", "x", "y", "d"]
 ```
 
 ---
@@ -218,7 +124,7 @@ const sum = numbers.reduce((accumulator, currValue) => accumulator + currValue, 
 console.log(sum);
 ```
 
-- **🔀 sort()**: Sorts the array. The sort method sorts based on `ASCII values`.
+- **🔀 sort()**: Sorts the array (default: lexicographical order). The sort method sorts based on `ASCII values`.
 ```javascript
 const numbers = [4,5,6,2];
 numbers.sort();
@@ -276,5 +182,45 @@ gArr.splice(1,0,'newItem');
 
 // 🔄 Both: 1st arg -> index, 2nd arg -> number of elements to delete, 3rd arg -> new elements
 gArr.splice(1,3,"another","JINC","jai ho");
+```
+
+- **🔄 reverse()**: Reverses the array.
+```javascript
+const numbers = [4,5,6,2];
+numbers.reverse(); // [2, 6, 5, 4]
+```
+- **🔀 concat()**: Concatenates two or more arrays.
+```javascript
+const numbers = [4,5,6,2];
+const newNumbers = numbers.concat([7,8,9]);
+console.log(newNumbers); // [4, 5, 6, 2, 7, 8, 9]
+```
+
+- **🔢 indexOf()**: Returns the index of the first occurrence of an element in the array.
+```javascript
+const numbers = [4,5,6,2];
+const index = numbers.indexOf(5);
+console.log(index); // 1
+```
+
+- **🔢 lastIndexOf()**: Returns the index of the last occurrence of an element in the array.
+```javascript
+const numbers = [4,5,6,2,5];
+const index = numbers.lastIndexOf(5);
+console.log(index); // 4
+```
+
+- **➕ join()**: Joins all elements of the array into a string.
+```javascript
+const numbers = [4,5,6,2];
+const str = numbers.join('-');
+console.log(str); // "4-5-6-2"
+```
+
+- **➖ slice()**: Returns a new array from a specified index. 
+```javascript
+const numbers = [4,5,6,2];
+const newNumbers = numbers.slice(1,3);
+console.log(newNumbers); // [5, 6]
 ```
 
