@@ -123,3 +123,33 @@ console.log(Object.keys(obj)); // ["name", "age"]
 console.log(Object.values(obj)); // ["Liam", 30]
 console.log(Object.entries(obj)); // [["name", "Liam"], ["age", 30]]
 ```
+
+# Questions 🚀
+### 1. **Problem Statement**
+
+You are given an array of objects representing students. Each object has the following properties:
+- `name` (string): The name of the student.
+- `age` (number): The age of the student.
+- `grades` (array of numbers): An array of the student's grades.
+
+Write a function `getTopStudents` that takes two arguments:
+1. `students` (array): An array of student objects.
+2. `threshold` (number): A grade threshold.
+
+The function should return an array of names of students whose **average grade** is greater than or equal to the `threshold`. The returned array should be sorted alphabetically by the students' names.
+
+---
+
+### **Example**
+
+```javascript
+const students = [
+    { name: "Alice", age: 20, grades: [85, 90, 88] },
+    { name: "Bob", age: 21, grades: [75, 80, 78] },
+    { name: "Charlie", age: 19, grades: [95, 92, 98] },
+    { name: "Diana", age: 22, grades: [88, 85, 90] }
+];
+
+console.log(getTopStudents(students, 90));
+// Output: ["Charlie", "Diana"]
+```
