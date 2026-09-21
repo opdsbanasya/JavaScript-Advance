@@ -42,7 +42,7 @@ console.log(fName); // line-5
 ## Hoisting
 - Before the execution phase, all the varialbes and functions ara `stored` in memory. During the `Global Execution Creation`, these variables have been created but not initialized. This is called `Hoisting`.
 
-- During Global Execution Cintext Creation, all functions declarations are stored in memory. But function expressions are not hoisted.
+- During Global Execution Context Creation, all functions declarations are stored in memory. But function expressions are not hoisted.
 #### Are let and const are hoisted ? What is a reference Error ? 
 - In case of `let` and `const`, they are hoisted but not initialized. Period of `un-initialized` variable is known as **`Temporal Dead Zone`**.
 

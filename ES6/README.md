@@ -85,7 +85,7 @@ console.log(math.add(10, 5)); // 15
 
 **Congratulations** 
 **Now you know javascript in Great Details**
-**What next ? **
+**What next ?**
 - Multiple Projects
 - Interview Questions
 - Web Performance

@@ -64,6 +64,8 @@ button.removeEventListener("click", handleClick);
 ```javascript
 document.body.addEventListener("click", () => console.log("Body Clicked!"), true); // Capturing phase
 document.querySelector("button").addEventListener("click", () => console.log("Button Clicked!")); // Bubbling phase
+
+e.preventDefault() // prevents the default action of an event. add it to callback function of event listener.
 ```
 
 ---

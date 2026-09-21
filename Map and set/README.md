@@ -75,7 +75,7 @@ console.log(target); // { a: 1, b: 2, c: 3 }
 ---
 
 ## 🤔 Optional Chaining `?.`
-- 🛑 **Prevents errors** when accessing properties of `null` or `undefined`. There are `?.` operatoe is used.
+- 🛑 **Prevents errors** when accessing properties of `null` or `undefined`. There are `?.` operator is used.
 
 **📌 Example:**
 ```javascript
